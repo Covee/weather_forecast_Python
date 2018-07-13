@@ -1,0 +1,32 @@
+{% extends 'weather_RSS/base.html' %}
+
+
+{% block body %}
+  	<div class="container-fluid">
+
+<div class="jumbotron" style="text-align: center;">
+  <h2 class="display-3">{{ date }}<br/> <{{ where }}> 날씨를 알려드리겠습니당!</h2><br/>
+  <h3>★ 실시간 날씨정보 : <span style="color: red;">{{ weather }}</span> ★</h3>
+
+  <hr class="my-4">
+  <p class="lead">
+    
+<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample">날씨 정보 더 보기</button>
+<div class="collapse" id="collapseExample">
+  <div class="well">
+    <h5>섭씨 : {{ temp }}℃</h5>
+  	<h5>습도 : {{ hum }}%</h5>
+  	<h5>강수 확률 : {{ rain }}%</h5>
+  	<h5>풍향 : {{ wind_d }}풍</h5>
+  	<h5>풍속 : {{ wind_s }}m/s</h5>
+  </div>
+</div>
+
+
+  </p>
+</div>
+</div>
+
+
+
+{% endblock %}
